@@ -11,7 +11,7 @@ export class PadreComponent {
   @Input() propFiglioCopia!: RomanNumber[];
   // FORSE è colpevole del bug Padri Che Rovinano I Figli
 
-  @Output() outputPadre = new EventEmitter<RomanNumber>();
+  @Output() outputPadre = new EventEmitter<RomanNumber[]>();
 
   // version 1
   dispari: RomanNumber[] = this.propFiglioCopia.filter(
@@ -41,5 +41,7 @@ export class PadreComponent {
   // for version 1, 2, 3
   sendDispari() {
     this.outputPadre.emit(this.dispari); // FUNZIONA!!! ho settato le proprietà di RomanNumber come opzionali `?:`
+
+    // NOPE: forse mi ero solo scordato che EventEmitter voleva come parametro un array di RomanNumber `EventEmitter<RomanNumber>`
   }
 }
