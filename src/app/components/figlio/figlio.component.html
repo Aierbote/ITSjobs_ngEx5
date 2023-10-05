@@ -2,3 +2,6 @@
 <div *ngFor="let num of propFiglio">
   <p *ngIf="num.digits % 2 == 0">{{ num }}</p>
 </div>
+
+<h2>`Padre`</h2>
+<app-padre [propFiglioCopia]="propFiglio"></app-padre>
