@@ -1,4 +1,15 @@
-<h2>`Figlio` OPERAT! Impero D'Occidente</h2>
-<div *ngFor="let num of propFiglio">
-  <p *ngIf="num.digits % 2 == 0">{{ num }}</p>
+<div>
+  <h2>`Figlio` OPERAT! Impero D'Occidente</h2>
+  <div *ngFor="let num of propFiglio">
+    <p *ngIf="num.digits % 2 == 0">{{ num }}</p>
+  </div>
 </div>
+
+<div>
+  <h2>Padre</h2>
+
+  <!-- BUG: app-padre, colpevole di Padri Che Rovinano I Figli -->
+  <app-padre (output)="receiveDispari($event)"></app-padre>
+</div>
+
+<p>Output di Padre ricevuto da Figlio {{ dispari }}</p>

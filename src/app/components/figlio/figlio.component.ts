@@ -8,4 +8,10 @@ import { RomanNumber } from 'src/app/roman-number';
 })
 export class FiglioComponent {
   @Input() propFiglio!: RomanNumber[];
+
+  dispari: RomanNumber[] = [new RomanNumber('ZEROinROMANO', 0)];
+
+  receiveDispari(event: any) {
+    this.dispari = event;
+  }
 }
