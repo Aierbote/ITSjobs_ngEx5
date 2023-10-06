@@ -13,5 +13,7 @@ export class FiglioComponent {
 
   receiveDispari(event: any) {
     this.dispari = event;
+
+    console.log('receiving `dispari`');
   }
 }

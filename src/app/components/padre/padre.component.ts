@@ -43,5 +43,7 @@ export class PadreComponent {
     this.outputPadre.emit(this.dispari); // FUNZIONA!!! ho settato le proprietà di RomanNumber come opzionali `?:`
 
     // NOPE: forse mi ero solo scordato che EventEmitter voleva come parametro un array di RomanNumber `EventEmitter<RomanNumber>`
+
+    console.log('sending `dispari`');
   }
 }

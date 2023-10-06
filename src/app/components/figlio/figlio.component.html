@@ -9,7 +9,8 @@
   <h2>Padre</h2>
 
   <!-- BUG: app-padre, colpevole di Padri Che Rovinano I Figli -->
-  <app-padre (output)="receiveDispari($event)"></app-padre>
+  <!-- FIX: in padre.component ho tolto la array creata con `filter()` -->
+  <app-padre (outputPadre)="receiveDispari($event)"></app-padre>
 </div>
 
 <p>Output di Padre ricevuto da Figlio {{ dispari }}</p>
