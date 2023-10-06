@@ -13,10 +13,10 @@ export class PadreComponent {
 
   @Output() outputPadre = new EventEmitter<RomanNumber[]>();
 
-  // version 1
-  dispari: RomanNumber[] = this.propFiglioCopia.filter(
-    (num) => num.digits % 2 != 0
-  );
+  // // version 1
+  // dispari: RomanNumber[] = this.propFiglioCopia.filter(
+  //   (num) => num.digits % 2 != 0
+  // );
 
   // // version 2
   // dispari!: RomanNumber[];
@@ -29,14 +29,14 @@ export class PadreComponent {
   //   }
   // }
 
-  // // version 3
-  // dispari: RomanNumber[] = [
-  //   new RomanNumber('I', 1),
-  //   new RomanNumber('III', 3),
-  //   new RomanNumber('V', 5),
-  //   new RomanNumber('VII', 7),
-  //   new RomanNumber('IX', 9),
-  // ];
+  // version 3
+  dispari: RomanNumber[] = [
+    new RomanNumber('I', 1),
+    new RomanNumber('III', 3),
+    new RomanNumber('V', 5),
+    new RomanNumber('VII', 7),
+    new RomanNumber('IX', 9),
+  ];
 
   // for version 1, 2, 3
   sendDispari() {
