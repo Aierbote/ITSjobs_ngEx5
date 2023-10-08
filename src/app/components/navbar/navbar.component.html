@@ -8,8 +8,11 @@
     cursor: pointer;
   "
 >
+  <!-- NOTE   -->
   <!-- lavorando con le rotte del ROUTERLINK NON, NON SERVONO gli `href` -->
-  <a routerlink="/footer ">Footer</a>
-  <a routerlink="/header ">Header</a>
-  <a routerlink="/home ">Home</a>
+  <!-- la direttiva si deve chiamare routerLink, e non routerlink -->
+  <!-- SOLO path relativi, definiti nei `Routes`, senza `./`-->
+  <a routerLink="footer">Footer</a>
+  <a routerLink="header">Header</a>
+  <a routerLink="home">Home</a>
 </div>
