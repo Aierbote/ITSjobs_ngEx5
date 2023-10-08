@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { FiglioComponent } from './components/figlio/figlio.component';
 import { PadreComponent } from './components/padre/padre.component';
 
+// NOTE : Important to import RouterModule
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     FiglioComponent,
-    PadreComponent
+    PadreComponent,
+    NavbarComponent,
+    FooterComponent,
+    HeaderComponent,
+    HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
